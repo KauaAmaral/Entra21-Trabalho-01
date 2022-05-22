@@ -208,6 +208,5 @@ namespace TrabalhoOrientacaoObjetos01.Tests.Questao03
 
             obterHoraCompletaPorExtenso.Should().Be(apresentarHoras);
         }
-
     }
 }
