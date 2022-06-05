@@ -9,8 +9,8 @@ using Xunit;
 
 namespace TrabalhoOrientacaoObjetos01.Tests.Questao01
 {
-    //Cláudio Henrique Raimundo
-    public class NumeroTests
+    
+    public class NumeroTests   //Cláudio Henrique Raimundo
     {
         [Theory]
         [InlineData(0, "zero")]
@@ -207,6 +207,43 @@ namespace TrabalhoOrientacaoObjetos01.Tests.Questao01
         }
 
         [Theory]
+        [InlineData(1000, "mil")]
+        [InlineData(2000, "dois mil")]
+        [InlineData(3000, "três mil")]
+        [InlineData(4000, "quatro mil")]
+        [InlineData(5000, "cinco mil")]
+        [InlineData(6000, "seis mil")]
+        [InlineData(7000, "sete mil")]
+        [InlineData(8000, "oito mil")]
+        [InlineData(9000, "nove mil")]
+        [InlineData(9001, "nove mil e um")]
+
+        public void Validar_MilharPorExtenso(double milharDigitada, string milharPorExtenso)
+        {
+            var numero = new Numero();
+            numero.Valor = milharDigitada;
+
+            var validarMilhar = numero.ObterMilharPorExtenso();
+            validarMilhar.Should().Be(milharPorExtenso);
+        }
+
+
+        [Theory]
+        [InlineData(3322, "três mil trezentos e vinte e dois")]
+        [InlineData(4568, "quatro mil cinqueta e sessenta e oito")]
+        [InlineData(5687, "cinco mil seissentos e oitenta e sete")]
+        [InlineData(8999, "oito mil novecentos e noventa e nove")]
+        [InlineData(1210, "mil duzentos e dez")]
+
+        public void Valida_NumeroCompletoPorExtenso(double numeroCompletoDigitado, string numeroCompletoPorExtenso)
+        {
+            var numero = new Numero();
+            numero.Valor = numeroCompletoDigitado;
+
+            var validarNumeroCompleto = numero.ObterNumeroCompletoPorExtenso();
+            validarNumeroCompleto.Should().Be(numeroCompletoPorExtenso);
+        }
+
 
 
     }

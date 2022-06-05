@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace TrabalhoOrientacaoObjetos01.Questao01
 {
-    //Cláudio HenriqueRaimundo
-    public class ExemploNumero
+    
+    public class ExemploNumero  //Cláudio HenriqueRaimundo
     {
         public void Executar()
         {

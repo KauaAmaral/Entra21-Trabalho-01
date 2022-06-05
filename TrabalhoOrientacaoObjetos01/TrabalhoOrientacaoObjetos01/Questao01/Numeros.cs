@@ -30,8 +30,8 @@ namespace TrabalhoOrientacaoObjetos01.Questao01
     //permitindo o usuário escolher qual dos métodos citados acima ele deseja
     //executar.
 
-    //Cláudio Henrique Raimundo
-    public class Numero
+    
+    public class Numero   //Cláudio Henrique Raimundo
     {
         public double Valor;
 
